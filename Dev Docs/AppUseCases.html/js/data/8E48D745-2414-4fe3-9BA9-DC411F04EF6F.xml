@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("0:1", "", "App Use Cases", "EARoot/EA1.htm", "180.png", "20", "0", "", "Use Case diagram0","{BDD92A5A-C2A4-4666-86C4-7B4741EAE281}");
+tocTab[tocTab.length] = new Array("0:3", "", "Navigate the Screens", "EARoot/EA6.htm", "7.png", "67", "0", "", "UseCase0","{CAFF0062-AB15-4391-B290-541E0B3712D4}");
+tocTab[tocTab.length] = new Array("0:4", "", "User", "EARoot/EA7.htm", "6.png", "65", "0", "", "Actor0","{3A2ADB36-2C86-46b6-A713-43D631B85313}");
+tocTab[tocTab.length] = new Array("0:2", "", "Navigate Requirements", "EARoot/EA3.htm", "188.png", "21", "67", "", "Custom diagram0","{3EEA0C4C-5779-4f32-A3F2-43EA31D2C736}");
+tocTab[tocTab.length] = new Array("0:5", "", "«Functional» Close Graph Window with &lt;ctrl&gt; + w", "EARoot/EA8.htm", "19.png", "70", "67", "", "Requirement0","{F0449795-2F51-47cd-8958-39EEA7CB141F}");
+tocTab[tocTab.length] = new Array("0:6", "", "«Functional» Close Graph Window with Escape key", "EARoot/EA9.htm", "19.png", "69", "67", "", "Requirement0","{8FEECFC0-78E3-434c-B0DF-56F0BB3EDC69}");
+tocTab[tocTab.length] = new Array("0:7", "", "«Functional» Display Employees Screen using e", "EARoot/EA10.htm", "19.png", "73", "67", "", "Requirement0","{0CF447F3-700F-4987-A543-D3B52F780900}");
+tocTab[tocTab.length] = new Array("0:8", "", "«Functional» Display Graph Window using m", "EARoot/EA11.htm", "19.png", "71", "67", "", "Requirement0","{9446C10F-F610-4c15-8CD0-2B65C79C3CA3}");
+tocTab[tocTab.length] = new Array("0:9", "", "«Functional» Display Projects Screen using p", "EARoot/EA12.htm", "19.png", "72", "67", "", "Requirement0","{8683BF4F-8FC8-42ae-8F18-2683AFF68A33}");
+tocTab[tocTab.length] = new Array("0:10", "", "«Functional» Display the Home Screen using h", "EARoot/EA13.htm", "19.png", "74", "67", "", "Requirement0","{07B9A948-AF10-411e-A39B-688E375D793F}");
+tocTab[tocTab.length] = new Array("0:11", "", "«Functional» Navigate Using Arrow Keys", "EARoot/EA14.htm", "19.png", "68", "67", "", "Requirement0","{F7005B73-70A9-4ea2-8C6A-DB0E69627E2C}");

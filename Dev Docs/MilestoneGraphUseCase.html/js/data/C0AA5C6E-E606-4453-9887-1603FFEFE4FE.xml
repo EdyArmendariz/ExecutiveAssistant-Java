@@ -1,0 +1,16 @@
+tocTab[tocTab.length] = new Array("0:2", "", "Milestone Graph Use Cases", "EARoot/EA3.htm", "180.png", "17", "0", "", "Use Case diagram0","{7F9FF55E-B415-4566-9131-F6DD41EFAEFA}");
+tocTab[tocTab.length] = new Array("0:4", "", "Connect Milestone", "EARoot/EA7.htm", "7.png", "56", "0", "", "UseCase0","{B6C1B946-C78F-43d0-BABD-7D5B9ABD92BD}");
+tocTab[tocTab.length] = new Array("0:5", "", "Delete Milestone", "EARoot/EA8.htm", "7.png", "57", "0", "", "UseCase0","{098CCA80-CBBD-4768-81A4-67F81BE3CC1A}");
+tocTab[tocTab.length] = new Array("0:6", "", "Disconnect Milestone", "EARoot/EA9.htm", "7.png", "58", "0", "", "UseCase0","{004D5F23-ED98-4595-AC92-6CE7892A0588}");
+tocTab[tocTab.length] = new Array("0:7", "", "Edit Milestone", "EARoot/EA10.htm", "7.png", "76", "0", "", "UseCase0","{E1146BE4-7242-44de-B823-BBA0EA0C9156}");
+tocTab[tocTab.length] = new Array("0:8", "", "Identify Milestone", "EARoot/EA11.htm", "7.png", "52", "0", "", "UseCase0","{E6F2B6D0-240B-43a7-887A-9BAD71F1AAB3}");
+tocTab[tocTab.length] = new Array("0:9", "", "Move Milestone", "EARoot/EA12.htm", "7.png", "55", "0", "", "UseCase0","{BEB5FA62-DA2B-4782-8806-A368ACE9D6B0}");
+tocTab[tocTab.length] = new Array("0:10", "", "New Milestone", "EARoot/EA13.htm", "7.png", "75", "0", "", "UseCase0","{8643B14A-24EA-4ac9-B16B-EF35E0B191D2}");
+tocTab[tocTab.length] = new Array("0:11", "", "Set Preferences", "EARoot/EA14.htm", "7.png", "60", "0", "", "UseCase0","{FBD851D0-8BEA-4d1b-8445-6F04E551E9BD}");
+tocTab[tocTab.length] = new Array("0:12", "", "User", "EARoot/EA16.htm", "6.png", "54", "0", "", "Actor0","{F923135E-8FF0-4fd6-A30B-8344EB10C54A}");
+tocTab[tocTab.length] = new Array("0:1", "", "Milestone Graph Use Cases", "EARoot/EA1.htm", "188.png", "18", "52", "", "Custom diagram0","{36F6D0AB-299F-4251-887E-6B46D4CACE3C}");
+tocTab[tocTab.length] = new Array("0:3", "", "Milestone Use Cases", "EARoot/EA5.htm", "188.png", "19", "60", "", "Custom diagram0","{5A5EEB22-773F-47e2-B33A-990F9AAB402E}");
+tocTab[tocTab.length] = new Array("0:13", "", "«Functional» Mousing Over", "EARoot/EA17.htm", "19.png", "59", "52", "", "Requirement0","{FFFFC799-4168-4d65-9383-90985B6A472F}");
+tocTab[tocTab.length] = new Array("0:14", "", "«Functional» Display Name", "EARoot/EA18.htm", "19.png", "61", "60", "", "Requirement0","{DA35197A-952E-447a-89DC-B212F7904E92}");
+tocTab[tocTab.length] = new Array("0:15", "", "«Functional» Set Font for Display Name", "EARoot/EA19.htm", "19.png", "63", "60", "", "Requirement0","{884A32B8-4A2B-48c9-9879-7CDD0907DF67}");
+tocTab[tocTab.length] = new Array("0:16", "", "«Functional» Set Milestone Size", "EARoot/EA20.htm", "19.png", "62", "60", "", "Requirement0","{D83EEC12-4993-47c8-884B-CB3B5080AA15}");

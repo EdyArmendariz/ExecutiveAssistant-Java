@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("0:1", "", "Project Employee Use Cases", "EARoot/EA1.htm", "180.png", "22", "0", "", "Use Case diagram0","{17A59E3D-CD54-4ec8-B725-199BC3816E68}");
+tocTab[tocTab.length] = new Array("0:3", "", "Add Employee", "EARoot/EA5.htm", "7.png", "80", "0", "", "UseCase0","{09C5901C-8BE2-423f-A80D-D60EC48DC6CC}");
+tocTab[tocTab.length] = new Array("0:4", "", "Edit Employee", "EARoot/EA6.htm", "7.png", "83", "0", "", "UseCase0","{4C380E95-D103-4db1-A54E-1C92B49E675F}");
+tocTab[tocTab.length] = new Array("0:5", "", "Remove Employee", "EARoot/EA8.htm", "7.png", "81", "0", "", "UseCase0","{A977394E-ECE7-4591-A2F8-3B0A55919F3E}");
+tocTab[tocTab.length] = new Array("0:6", "", "User", "EARoot/EA9.htm", "6.png", "78", "0", "", "Actor0","{53D5D8CC-5535-49f8-BEA0-2EFBEBEE8682}");
+tocTab[tocTab.length] = new Array("0:7", "", "View Employee", "EARoot/EA10.htm", "7.png", "82", "0", "", "UseCase0","{D3080B69-01B9-4ebc-B7B9-071E74C40AD7}");
+tocTab[tocTab.length] = new Array("0:2", "", "Project Employee Use Cases", "EARoot/EA3.htm", "188.png", "24", "81", "", "Custom diagram0","{9CDB95DF-48FE-4e07-A614-271D67363960}");
+tocTab[tocTab.length] = new Array("0:8", "", "«Functional» Remove Employee from the Current Project", "EARoot/EA11.htm", "19.png", "90", "81", "", "Requirement0","{1F3DD0B2-B7BA-4d7b-A6FA-E96BEDFF4511}");

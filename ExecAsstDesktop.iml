@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4" relativePaths="true" type="JAVA_MODULE">
+  <component name="ModuleRootManager" />
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/classes" />
+    <exclude-output />
+    <exclude-exploded />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntryProperties />
+    <javadoc-paths>
+      <root url="http://www.dom4j.org/apidocs/index.html/" />
+      <root url="http://www.dom4j.org/apidocs/" />
+      <root url="http://www.dom4j.org/" />
+      <root url="http://www.dom4j.org/apidocs/org/dom4j/Element.html/" />
+      <root url="http://www.dom4j.org/apidocs/org/dom4j/" />
+      <root url="http://www.dom4j.org/apidocs/org/" />
+    </javadoc-paths>
+  </component>
+</module>
+

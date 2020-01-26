@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="module_execasstdesktop" default="compile.module.execasstdesktop">
+  <dirname property="module.execasstdesktop.basedir" file="${ant.file.module_execasstdesktop}"/>
+  
+  <property name="module.jdk.home.execasstdesktop" value="${project.jdk.home}"/>
+  <property name="module.jdk.classpath.execasstdesktop" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.execasstdesktop" value="${compiler.args}"/>
+  
+  <property name="execasstdesktop.output.dir" value="${module.execasstdesktop.basedir}/classes"/>
+  <property name="execasstdesktop.testoutput.dir" value="${module.execasstdesktop.basedir}/classes"/>
+  
+  <path id="execasstdesktop.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="execasstdesktop.module.classpath">
+    <path refid="${module.jdk.classpath.execasstdesktop}"/>
+    <pathelement location="${module.execasstdesktop.basedir}/../../../../../../../IntelliJ-IDEA-4.5/lib/dom4j-full.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.execasstdesktop"/>
+  
+  <patternset id="excluded.from.compilation.execasstdesktop">
+    <patternset refid="excluded.from.module.execasstdesktop"/>
+    <patternset refid="compiler.excluded"/>
+  </patternset>
+  
+  <path id="execasstdesktop.module.sourcepath">
+    <dirset dir="${module.execasstdesktop.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.execasstdesktop" depends="compile.module.execasstdesktop.production,compile.module.execasstdesktop.tests" description="compile module ExecAsstDesktop"/>
+  
+  <target name="compile.module.execasstdesktop.production" description="compile module ExecAsstDesktop production classes">
+    <mkdir dir="${execasstdesktop.output.dir}"/>
+    <javac destdir="${execasstdesktop.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memoryMaximumSize="${compiler.max.memory}" fork="true" executable="${module.jdk.home.execasstdesktop}/bin/javac">
+      <compilerarg line="${compiler.args.execasstdesktop}"/>
+      <bootclasspath refid="execasstdesktop.module.bootclasspath"/>
+      <classpath refid="execasstdesktop.module.classpath"/>
+      <src refid="execasstdesktop.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.execasstdesktop"/>
+    </javac>
+    <copy todir="${execasstdesktop.output.dir}">
+      <fileset dir="${module.execasstdesktop.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+        <patternset refid="excluded.from.compilation.execasstdesktop"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.execasstdesktop.tests" depends="compile.module.execasstdesktop.production" description="compile module ExecAsstDesktop test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.execasstdesktop" description="cleanup module">
+    <delete dir="${execasstdesktop.output.dir}"/>
+    <delete dir="${execasstdesktop.testoutput.dir}"/>
+  </target>
+</project>

@@ -1,0 +1,123 @@
+long CSynchronizer::PerformFastSync(void)  
+{
+    long retval;
+    long err = 0;
+    CPalmRecord palmRec;
+    DesktopDB deskDB;
+    
+    LogAddEntry( "CSynchronizer::PerformFastSync ()", slWarning, FALSE );
+    //LogAddFormattedEntry( slWarning, FALSE, " deskDB=%i", deskDB.getTester() );
+    deskDB.setTester( 20 );
+    //LogAddFormattedEntry( slWarning, FALSE, " deskDB=%i", deskDB.getTester() );
+    
+    retval = CreateDbManagers();
+    if (retval)
+    {
+        return retval;
+    }
+    m_dbHH->assignDesktopDB ( DESKTOPDB ); 
+	m_dbPC->assignDesktopDB ( DESKTOPDB );
+	//LogAddFormattedEntry( slWarning, FALSE, " --- Address of DESKTOPDB=%i", &DESKTOPDB );
+	//LogAddFormattedEntry( slWarning, FALSE, "   testing m_dbPC-> %i", m_dbPC->showTestVal() );
+	//LogAddFormattedEntry( slWarning, FALSE, "   testing m_dbHH-> %i", m_dbHH->showTestVal() );
+	m_dbPC->_desktopDB->setTester ( 15 );
+	m_dbHH->_desktopDB->setTester ( 17 );
+	
+	//LogAddFormattedEntry( slWarning, FALSE, "   testing m_dbPC->_desktopDB->setTester( 15 )%i", m_dbPC->_desktopDB->getTester ()  );
+	//LogAddFormattedEntry( slWarning, FALSE, "   testing m_dbPC->showTestVal()=%i", m_dbPC->showTestVal()  );
+	
+	//LogAddFormattedEntry( slWarning, FALSE, "   testing m_dbHH->_desktopDB->setTester( 17 )%i", m_dbHH->_desktopDB->getTester ()  );
+	//LogAddFormattedEntry( slWarning, FALSE, "   testing m_dbHH->showTestVal()=%i", m_dbHH->showTestVal()  );
+	
+	retval = SynchronizeAppInfo();  // Plenty of Forking here ...
+	// CPCMgr::RetrieveDB() has been loaded ...
+    
+	if ( retval == GEN_ERR_NO_CATEGORIES )
+	{
+		// ExecAssist database does not use any categories
+		LogAddEntry( "   - ignoring categories", slWarning, FALSE );
+		DWORD  recCount = 0;
+		// m_dbPC->GetRecordCount( recCount );
+		// LogAddFormattedEntry( slWarning, FALSE, " m_dbPC recordcount=%i", recCount  );
+		// reset the error code to 0(zero)
+		retval = 0;
+	}    
+    else if (retval)
+     {
+	 	//LogAddFormattedEntry( slWarning, FALSE, "error SynchronizeAppInfo()= %li", retval );
+         return retval;
+     }
+
+    if (!retval) 
+    {
+		//LogAddEntry( "   - entering m_dbHH code ", slWarning, FALSE );
+        retval = m_dbHH->PreSync();
+        DWORD  recCount = 0;
+        m_dbHH->GetRecordCount( recCount );
+        //LogAddFormattedEntry( slWarning, FALSE, "m_dbHH recordcount=%i", recCount  );
+        //LogAddFormattedEntry ( slWarning, FALSE, " m_dbHH->PreSync()=%i", retval );
+        if (!retval)
+        {
+			 //LogAddEntry( "m_dbHH->PreSync() is o.k.", slWarning, FALSE );
+            retval = m_dbPC->PreSync();
+            
+            if ( retval )
+				LogAddEntry( "m_dbPC->PreSync()    failed.", slWarning, FALSE );
+        }
+    }
+    
+	if ( retval != GEN_ERR_NO_CATEGORIES )
+	{	
+		LogAddEntry ( "  ... catching after m_dbHH->PreSync()", slWarning, FALSE );
+		//return retval;  TESTING TESTING TESTING
+	}
+		
+	// Find the record from the Handheld.
+    err = m_dbHH->FindFirstModifiedRec(palmRec);
+    
+    return retval;
+    // Search for Handheld record equivalent on the PC and merge it there.
+    while (!err && !retval) 
+    {
+        retval = SynchronizeRemoteRecord(palmRec);
+        if (!retval)
+            err = m_dbHH->FindNext(palmRec);
+    }
+    
+    if (err == GEN_ERR_NO_MORE_RECORDS)
+        err = 0;
+
+	// Find the record from the PC.
+    err = m_dbPC->FindFirstModifiedRec(palmRec);
+    while (!err && !retval) 
+    {
+        retval = SynchronizeLocalRecord(palmRec);
+        if (!retval)
+            err = m_dbPC->FindNext(palmRec);
+    }
+    if (err == GEN_ERR_NO_MORE_RECORDS)
+        err = 0;
+
+    if (retval)
+        return retval;
+
+
+    retval = ConfirmSynchronization();
+
+    if (retval)
+        return retval;
+
+    retval = m_dbHH->PostSync();
+    if (retval)
+        return retval;
+    retval = m_dbPC->PostSync();
+
+    if (retval)
+        return retval;
+
+    // backup the PC DB
+	if (m_dbBackup)
+		retval = m_dbBackup->PostSync();
+
+    return retval;
+}

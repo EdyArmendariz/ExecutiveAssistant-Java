@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0:1", "", "Employee Use Case", "EARoot/EA1.htm", "180.png", "23", "0", "", "Use Case diagram0","{E52542D8-8D3B-41f6-A164-68E59DFEB695}");
+tocTab[tocTab.length] = new Array("0:2", "", "Add Employee", "EARoot/EA3.htm", "7.png", "87", "0", "", "UseCase0","{F5EBB3BF-089A-4acf-9EF8-5072BD2D2382}");
+tocTab[tocTab.length] = new Array("0:3", "", "Delete Employee", "EARoot/EA4.htm", "7.png", "88", "0", "", "UseCase0","{536FBE7C-B2FF-4dc3-B2CD-30C377BCEA6D}");
+tocTab[tocTab.length] = new Array("0:4", "", "Edit Employee", "EARoot/EA5.htm", "7.png", "89", "0", "", "UseCase0","{8CD3BAF3-1D45-4e61-9CA0-0F785560D592}");
+tocTab[tocTab.length] = new Array("0:5", "", "User", "EARoot/EA7.htm", "6.png", "86", "0", "", "Actor0","{ED4FD390-FEF0-42b3-8D14-09E4E6DB72C6}");
